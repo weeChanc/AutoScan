@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.weechan.autoscan">
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+
+
+        <meta-data
+                android:name="xposedmodule"
+                android:value="true" />
+        <meta-data
+                android:name="xposeddescription"
+                android:value="Xposed Test WeeChan" />
+        <meta-data
+                android:name="xposedminversion"
+                android:value="53" />
+
+        <!--xposedmodule： 一般设置为true,表示这是一个xposed模块-->
+        <!--xposeddescription: 一句话描述该模块的用途，可以引用string.xml中的字符串-->
+        <!--xposedminversion： 没错，这个就是上面提到的xposedminversion。我理解为要求支持的Xposed Framework最低版本。-->
+
+
+        <activity android:name=".MainActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
